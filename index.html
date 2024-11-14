@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario de Camisetas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Inventario de Camisetas</h1>
+  </header>
+
+  <section id="form-section">
+    <form id="inventory-form">
+      <label for="team-name">Nombre del Equipo:</label>
+      <input type="text" id="team-name" required>
+      
+      <!-- Opciones de tipo de camiseta -->
+      <label>Tipo de Camiseta:</label>
+      <div id="shirt-type-options">
+        <label>
+          <input type="radio" name="shirt-type" value="Titular" required> Titular
+        </label>
+        <label>
+          <input type="radio" name="shirt-type" value="Suplente"> Suplente
+        </label>
+        <label>
+          <input type="radio" name="shirt-type" value="Otro"> Otro
+        </label>
+      </div>
+      
+      <label for="country">País:</label>
+      <input type="text" id="country" required>
+      
+      <label for="year">Año:</label>
+      <input type="number" id="year" required>
+      
+      <label for="image">Imagen:</label>
+      <input type="file" id="image" accept="image/*" required>
+      
+      <button type="submit">Agregar Camiseta</button>
+    </form>
+  </section>
+
+  <section>
+    <label for="category-filter">Filtrar por Categoría:</label>
+    <select id="category-filter">
+      <option value="all">Todas</option>
+    </select>
+  </section>
+
+  <div id="inventory-list"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
